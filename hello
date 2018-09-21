@@ -1,0 +1,7 @@
+Client.on('message', (message)=>{
+    if(!message.content.startsWith(prefix)) return;
+
+    if(message.content.startsWith(prefix + "hello")){
+        message.channel.send("Hello, " + message.author + " how you doing?");
+    
+    }
