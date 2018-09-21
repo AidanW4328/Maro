@@ -1,0 +1,32 @@
+
+    if(message.content.startsWith(prefix + "purge")){
+        let args = message.content.split(" ").slice(1);
+        let author = message.member;
+        let role = message.guild.roles.find('name', "Moderator");
+        if(author.roles.has(role.id)){
+            if(!args[0]){
+                message.delete();
+                message.autjor.send("No arguments given.");
+                return;
+            }
+            if(args[0] > 100){
+                message.delete();
+                message.author.send("Maximum is 100 messages")
+                return;
+            }
+
+        message.delete();
+        message.channel.bulkDelete(args[0]);
+        message.author.send("Deleted" + args[0] + "messages.");
+        return;
+
+        
+    }
+    
+    
+    }
+
+
+
+})
+
