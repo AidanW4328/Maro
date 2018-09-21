@@ -1,0 +1,5 @@
+
+    if(message.content.startsWith(prefix + "help")){
+        message.channel.send("Check your Dms " + message.author);
+        message.author.send("Moderation Commands: ``!hello !help !purge``");
+    }
